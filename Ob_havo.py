@@ -1,4 +1,3 @@
-from urllib import response
 import requests, json
 
 api_key = "3b6ac6966cf8d5d4f86ebd4cc8e0d5ec"
@@ -15,9 +14,11 @@ if x["cod"]!="404":
     current_temperature = y["temp"]
     current_pressure = y["pressure"]
     current_humidity = y["humidity"]
+    current_name = x["name"]
+    current_country = x["sys"]["country"]
 
     z = x["weather"]
     weather_description = z[0]["description"]
-    print("Temperature(harorat) = " + str(278.00 - current_temperature) + "\n Pressure(bosim) = " + str(current_pressure) + "\n Humidity(namlik) =  " + str(current_humidity) + " %" + "\n Description(tavsif) = " + str(weather_description))
+    print("Country = " + str(current_country) + "\nLocation = " + str(current_name) + "\nTemperature(harorat) = " + str(278.00 - current_temperature) + "\n Pressure(bosim) = " + str(current_pressure) + "\n Humidity(namlik) =  " + str(current_humidity) + " %" + "\n Description(tavsif) = " + str(weather_description))
 else:
     print("City not found")

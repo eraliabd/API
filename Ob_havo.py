@@ -19,6 +19,6 @@ if x["cod"]!="404":
 
     z = x["weather"]
     weather_description = z[0]["description"]
-    print("Country = " + str(current_country) + "\nLocation = " + str(current_name) + "\nTemperature(harorat) = " + str(278.00 - current_temperature) + "\n Pressure(bosim) = " + str(current_pressure) + "\n Humidity(namlik) =  " + str(current_humidity) + " %" + "\n Description(tavsif) = " + str(weather_description))
+    print("Country = " + str(current_country) + "\nLocation = " + str(current_name) + "\nTemperature(harorat) = " + str(current_temperature) + "\n Pressure(bosim) = " + str(current_pressure) + "\n Humidity(namlik) =  " + str(current_humidity) + " %" + "\n Description(tavsif) = " + str(weather_description))
 else:
     print("City not found")
